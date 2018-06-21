@@ -361,6 +361,8 @@ public:
 
         // 254,255: reserved
 
+        k_param_low_slow_alt = 256,
+
         // the k_param_* space is 9-bits in size
         // 511: reserved
     };
@@ -585,6 +587,8 @@ public:
     // follow
     AP_Follow follow;
 #endif
+
+    AP_Int32 low_slow_alt;
 };
 
 extern const AP_Param::Info        var_info[];

@@ -980,6 +980,14 @@ const AP_Param::GroupInfo ParametersG2::var_info[] = {
     AP_SUBGROUPINFO(follow, "FOLL", 27, ParametersG2, AP_Follow),
 #endif
 
+    // @Param: LOW_SLOW_ALT
+    // @DisplayName: Low slow_alt
+    // @Description: If altitude is below LOW_SLOW_ALT, viechle speed will be half
+    // @Units: m
+    // @Range: 10 100
+    // @Increment: 1
+    AP_GROUPINFO("LOW_SLOW_ALT", 28, ParametersG2, low_slow_alt, 10),
+
     AP_GROUPEND
 };
 
