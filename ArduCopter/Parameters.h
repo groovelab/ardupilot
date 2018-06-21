@@ -362,6 +362,7 @@ public:
         // 254,255: reserved
 
         k_param_low_slow_alt = 256,
+        k_param_low_slow_rate = 257,
 
         // the k_param_* space is 9-bits in size
         // 511: reserved
@@ -589,6 +590,7 @@ public:
 #endif
 
     AP_Int32 low_slow_alt;
+    AP_Float low_slow_rate;
 };
 
 extern const AP_Param::Info        var_info[];

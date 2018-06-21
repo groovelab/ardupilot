@@ -144,8 +144,8 @@ void Copter::ModeLowSlow::run()
         const int32_t alt_above_ground = get_alt_above_ground();
         //gcs().send_text(MAV_SEVERITY_DEBUG, "alt : %d", alt_above_ground);
 
-        float rate = alt_above_ground > g2.low_slow_alt * 100 ? 1.0f : 0.5f;
-        //gcs().send_text(MAV_SEVERITY_DEBUG, "rate : %f", rate);
+        float rate = alt_above_ground > g2.low_slow_alt * 100 ? 1.0f : g2.low_slow_rate;
+        gcs().send_text(MAV_SEVERITY_DEBUG, "rate : %f", rate);
 
         // call attitude controller
         attitude_control->input_euler_angle_roll_pitch_euler_rate_yaw(target_roll * rate, target_pitch * rate, target_yaw_rate);
