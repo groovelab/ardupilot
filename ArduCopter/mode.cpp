@@ -155,6 +155,9 @@ Copter::Mode *Copter::mode_from_mode_num(const uint8_t mode)
             ret = &mode_follow;
             break;
 #endif
+        case LOW_SLOW:
+            ret = &mode_lowslow;
+            break;
 
         default:
             break;
